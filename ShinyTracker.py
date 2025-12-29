@@ -1,12 +1,15 @@
 import keyboard
 import os
+import requests
+import json
+
+poke_api_url = 'https://pokeapi.co/api/v2/pokemon-species?limit=100000'
 
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 clear_console()
 print('Welcome to the Pokemon Shiny Tracker!')
-
 tracked_mon = input('Enter the name of the Pokemon to shiny hunt: ')
 encounters = 0
 
